@@ -32,7 +32,7 @@ static GtkWidget *pausebutton;
 static guint timer;
 static GdkGC *stdgc;
 static GdkPixmap *offscreen;
-static GdkFont *font;
+static PangoLayout *layout;
 static GdkColor white, black;
 static int screensize;
 
@@ -308,7 +308,9 @@ gtk_ui_draw_line(int x1, int y1, int x2, int y2) {
 
 static void
 gtk_ui_draw_string(const char *str, int x, int y) {
-	gdk_draw_string(offscreen, font, stdgc, x, y, str);
+	layout = gtk_widget_create_pango_layout(GTK_WIDGET(field), str);
+	gdk_draw_layout(offscreen, stdgc, x, y-15, layout);
+	g_object_unref(layout);
 }
 
 /*
@@ -469,7 +471,6 @@ gtk_ui_graphics_init(void) {
 	gdk_gc_set_exposures(stdgc, FALSE);
 	gdk_gc_set_line_attributes(stdgc, 2, GDK_LINE_SOLID, GDK_CAP_ROUND,
 				   GDK_JOIN_MITER);
-	font = (GdkFont *)gdk_font_load("fixed");
 }
 
 static GtkWidget *
