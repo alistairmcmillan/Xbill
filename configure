@@ -2541,8 +2541,8 @@ fi
 #define USE_GTK 1
 EOF
 
-		GTK_CFLAGS="`gtk-config --cflags`"
-		WIDGET_LIBS="$WIDGET_LIBS `gtk-config --libs`"
+		GTK_CFLAGS="`pkg-config --cflags gtk+-2.0`"
+		WIDGET_LIBS="$WIDGET_LIBS `pkg-config --libs gtk+-2.0`"
 		WIDGET_OBJS="$WIDGET_OBJS gtk.o"
 	fi
 fi
