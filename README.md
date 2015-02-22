@@ -50,8 +50,8 @@ Options:
 	options are supported.
 
 
-Authors:
-	Main Programmer:
-		Brian Wellington <bwelling@xbill.org>
-	Programming & graphics (v2.0 and earlier):
-		Matias Duarte <matias@hyperimage.com>
+## Authors 
+
+Main Programmer: Brian Wellington <bwelling@xbill.org>
+
+Programming & graphics (v2.0 and earlier): Matias Duarte <matias@hyperimage.com>
