@@ -1,6 +1,7 @@
 # XBill 2.1 [![Build Status](https://travis-ci.org/alistairmcmillan/Xbill.svg?branch=master)](https://travis-ci.org/alistairmcmillan/Xbill)
 
 Welcome to xbill...
+-------------------
 
 Ever get the feeling that nothing is going right?  You're a sysadmin,
 and someone's trying to destroy your computers.  The little people
@@ -50,7 +51,16 @@ Options:
 	options are supported.
 
 
-## Authors 
+
+Compile
+-------
+
+- `autoconf`
+- `./configure`
+- `make`
+
+Authors
+-------
 
 Main Programmer: Brian Wellington <bwelling@xbill.org>
 
