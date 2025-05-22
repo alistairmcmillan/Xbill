@@ -56,7 +56,7 @@ Compile
 -------
 
 - `autoconf`
-- `./configure`
+- `./configure --enable-gtk`
 - `make`
 
 Authors
